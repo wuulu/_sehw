@@ -1,0 +1,10 @@
+{
+  "name": "shiguang-secondhand-market",
+  "version": "1.0.0",
+  "private": true,
+  "description": "拾光二手交易平台",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check app.js && node --check server.js"
+  }
+}

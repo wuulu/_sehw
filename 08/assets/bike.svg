@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="腳踏車">
+  <rect width="600" height="450" fill="#ecdfd7"/>
+  <circle cx="96" cy="88" r="112" fill="#f7eee7"/>
+  <circle cx="526" cy="372" r="146" fill="#dfcdc2"/>
+  <ellipse cx="300" cy="378" rx="202" ry="22" fill="#5b3e31" opacity=".12"/>
+  <g fill="none" stroke="#34423c" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="184" cy="296" r="70" stroke-width="8"/>
+    <circle cx="416" cy="296" r="70" stroke-width="8"/>
+    <circle cx="184" cy="296" r="58" stroke-width="2" opacity=".35"/>
+    <circle cx="416" cy="296" r="58" stroke-width="2" opacity=".35"/>
+    <path d="M184 296 L254 190 L320 296 L184 296" stroke-width="7"/>
+    <path d="M254 190 L358 190 L416 296" stroke-width="7"/>
+    <path d="M320 296 L358 190" stroke-width="7"/>
+    <path d="M358 190 L380 154" stroke-width="6"/>
+    <path d="M356 154 H404" stroke-width="7"/>
+    <path d="M254 190 L242 160" stroke-width="6"/>
+    <path d="M224 156 H260" stroke-width="7"/>
+    <path d="M320 296 L328 270" stroke-width="5"/>
+    <path d="M308 266 H348" stroke-width="6"/>
+    <circle cx="320" cy="296" r="11" fill="#c06b4d" stroke="none"/>
+    <path d="M184 296 L158 296" stroke-width="5"/>
+    <path d="M416 296 L450 296" stroke-width="5"/>
+  </g>
+  <path d="M126 156 Q154 128 180 156" fill="none" stroke="#d0b09e" stroke-width="3" opacity=".7"/>
+</svg>

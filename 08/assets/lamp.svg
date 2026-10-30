@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="桌燈">
+  <rect width="600" height="450" fill="#f2e4d0"/>
+  <defs>
+    <radialGradient id="lamp-glow" cx="50%" cy="46%" r="50%">
+      <stop offset="0%" stop-color="#ffdca2" stop-opacity=".95"/>
+      <stop offset="100%" stop-color="#ffdca2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="300" cy="230" r="178" fill="url(#lamp-glow)"/>
+  <circle cx="504" cy="82" r="92" fill="#f8eddd" opacity=".75"/>
+  <path d="M0 360 Q300 330 600 360 V450 H0 Z" fill="#e3cfb5"/>
+  <ellipse cx="300" cy="380" rx="172" ry="22" fill="#6f5032" opacity=".12"/>
+  <path d="M190 235 H410 L348 138 Q300 116 252 138 Z" fill="#d79b55"/>
+  <path d="M205 229 H395 L340 147 Q300 128 260 147 Z" fill="#f3c983"/>
+  <path d="M300 232 V322" stroke="#5f4730" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="300" cy="349" rx="78" ry="22" fill="#7a5a3b"/>
+  <rect x="278" y="320" width="44" height="32" fill="#6a4d31"/>
+  <ellipse cx="300" cy="320" rx="78" ry="24" fill="#8d6845"/>
+  <ellipse cx="300" cy="318" rx="52" ry="14" fill="#a47d55" opacity=".65"/>
+  <circle cx="300" cy="234" r="10" fill="#fff2cf"/>
+</svg>

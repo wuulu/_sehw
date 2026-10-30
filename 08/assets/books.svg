@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="選書">
+  <rect width="600" height="450" fill="#efe3d3"/>
+  <circle cx="506" cy="92" r="116" fill="#f8efe3"/>
+  <circle cx="95" cy="365" r="132" fill="#e3d2bd"/>
+  <ellipse cx="300" cy="382" rx="180" ry="22" fill="#5e4631" opacity=".12"/>
+  <g transform="rotate(-3 300 280)">
+    <rect x="162" y="292" width="278" height="62" rx="9" fill="#334b42"/>
+    <rect x="174" y="292" width="16" height="62" fill="#24382f"/>
+    <rect x="198" y="312" width="104" height="6" rx="3" fill="#d8c7a8" opacity=".7"/>
+    <rect x="176" y="240" width="252" height="56" rx="8" fill="#c06b4d"/>
+    <rect x="188" y="240" width="14" height="56" fill="#a45136"/>
+    <rect x="208" y="260" width="84" height="6" rx="3" fill="#f0d8c9" opacity=".75"/>
+    <rect x="196" y="195" width="236" height="50" rx="7" fill="#d8b477"/>
+    <rect x="208" y="195" width="13" height="50" fill="#bd9554"/>
+    <rect x="226" y="214" width="72" height="5" rx="2.5" fill="#675032" opacity=".55"/>
+    <g transform="rotate(8 382 186)">
+      <rect x="338" y="152" width="98" height="134" rx="9" fill="#f7f1e6"/>
+      <rect x="350" y="170" width="56" height="5" rx="2.5" fill="#8a9a91"/>
+      <rect x="350" y="184" width="70" height="4" rx="2" fill="#b1bcb5"/>
+      <rect x="350" y="195" width="44" height="4" rx="2" fill="#b1bcb5"/>
+      <path d="M356 244 L376 220 L394 244 Z" fill="#6d8a79" opacity=".75"/>
+    </g>
+  </g>
+</svg>

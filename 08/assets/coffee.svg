@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="手沖咖啡組">
+  <rect width="600" height="450" fill="#e2e9e3"/>
+  <circle cx="85" cy="92" r="112" fill="#f0f5f0"/>
+  <circle cx="526" cy="370" r="146" fill="#ccd9d0"/>
+  <ellipse cx="300" cy="390" rx="178" ry="22" fill="#263a30" opacity=".12"/>
+  <g>
+    <path d="M206 290 Q206 374 300 376 Q394 374 394 290 Z" fill="#f7f4eb" stroke="#a9b9af" stroke-width="3"/>
+    <path d="M224 310 Q226 362 300 364 Q374 362 376 310" fill="#6f4c34" opacity=".8"/>
+    <path d="M394 306 Q438 306 438 337 Q438 364 394 364" fill="none" stroke="#a9b9af" stroke-width="8"/>
+    <path d="M238 214 H362 L332 292 H268 Z" fill="#f7f4eb" stroke="#a9b9af" stroke-width="3"/>
+    <path d="M252 224 H348 L327 282 H273 Z" fill="#6f4c34" opacity=".65"/>
+    <path d="M300 306 V326" stroke="#6f4c34" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+    <rect x="180" y="372" width="240" height="10" rx="5" fill="#b7c5bc"/>
+    <g fill="#5d4230">
+      <ellipse cx="440" cy="172" rx="14" ry="9" transform="rotate(-28 440 172)"/>
+      <ellipse cx="468" cy="198" rx="14" ry="9" transform="rotate(22 468 198)"/>
+      <path d="M440 172 Q448 180 452 187" fill="none" stroke="#d8c3b2" stroke-width="2"/>
+      <path d="M468 198 Q458 193 452 188" fill="none" stroke="#d8c3b2" stroke-width="2"/>
+    </g>
+    <path d="M300 168 Q282 144 300 120 Q318 144 300 168" fill="#f7f4eb" opacity=".55"/>
+  </g>
+</svg>

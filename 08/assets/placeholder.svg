@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="商品圖片">
+  <rect width="600" height="450" fill="#e9e4da"/>
+  <circle cx="98" cy="92" r="112" fill="#f4f0e8"/>
+  <circle cx="524" cy="372" r="146" fill="#d7cfc2"/>
+  <ellipse cx="300" cy="384" rx="168" ry="22" fill="#3c453f" opacity=".12"/>
+  <path d="M198 182 H402 L430 336 Q430 360 404 360 H196 Q170 360 170 336 Z" fill="#f8f4eb" stroke="#9aa69f" stroke-width="4"/>
+  <path d="M198 182 L252 132 H348 L402 182" fill="#d8ded8" stroke="#9aa69f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M198 182 H402" stroke="#9aa69f" stroke-width="4"/>
+  <path d="M256 132 L236 182 M344 132 L364 182" stroke="#9aa69f" stroke-width="3"/>
+  <rect x="282" y="226" width="36" height="36" rx="4" fill="none" stroke="#c06b4d" stroke-width="5"/>
+  <path d="M282 226 L318 262 M318 226 L282 262" stroke="#c06b4d" stroke-width="5"/>
+</svg>

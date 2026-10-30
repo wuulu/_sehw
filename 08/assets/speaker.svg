@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="藍牙喇叭">
+  <rect width="600" height="450" fill="#dbe6df"/>
+  <circle cx="98" cy="330" r="140" fill="#cddcd3"/>
+  <circle cx="520" cy="88" r="120" fill="#eef4ef"/>
+  <ellipse cx="300" cy="379" rx="162" ry="23" fill="#23352d" opacity=".12"/>
+  <g transform="rotate(3 300 250)">
+    <rect x="190" y="92" width="220" height="286" rx="30" fill="#202b26"/>
+    <rect x="190" y="92" width="220" height="36" rx="18" fill="#3a4740"/>
+    <rect x="213" y="118" width="174" height="34" rx="8" fill="#c9a66b"/>
+    <rect x="213" y="164" width="174" height="176" rx="14" fill="#2b3831"/>
+    <g stroke="#4b5b52" stroke-width="2" opacity=".85">
+      <line x1="225" y1="178" x2="225" y2="326"/>
+      <line x1="240" y1="178" x2="240" y2="326"/>
+      <line x1="255" y1="178" x2="255" y2="326"/>
+      <line x1="270" y1="178" x2="270" y2="326"/>
+      <line x1="285" y1="178" x2="285" y2="326"/>
+      <line x1="300" y1="178" x2="300" y2="326"/>
+      <line x1="315" y1="178" x2="315" y2="326"/>
+      <line x1="330" y1="178" x2="330" y2="326"/>
+      <line x1="345" y1="178" x2="345" y2="326"/>
+      <line x1="360" y1="178" x2="360" y2="326"/>
+      <line x1="375" y1="178" x2="375" y2="326"/>
+    </g>
+    <circle cx="220" cy="102" r="7" fill="#d96b4b"/>
+    <circle cx="242" cy="102" r="7" fill="#8ca397"/>
+    <circle cx="380" cy="102" r="7" fill="#c9a66b"/>
+    <rect x="280" y="350" width="40" height="8" rx="4" fill="#59665e"/>
+  </g>
+</svg>

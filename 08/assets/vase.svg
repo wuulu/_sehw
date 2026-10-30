@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="陶瓷花器">
+  <rect width="600" height="450" fill="#e5dfd5"/>
+  <circle cx="94" cy="92" r="112" fill="#f2ede5"/>
+  <circle cx="522" cy="374" r="148" fill="#d4c9bb"/>
+  <ellipse cx="300" cy="392" rx="160" ry="20" fill="#4b3c30" opacity=".12"/>
+  <g fill="none" stroke="#5f5144" stroke-linecap="round">
+    <path d="M300 232 Q280 190 236 154" stroke-width="3"/>
+    <path d="M300 232 Q332 186 366 142" stroke-width="3"/>
+    <path d="M300 232 Q310 176 300 116" stroke-width="3"/>
+    <path d="M268 180 Q244 168 228 178" stroke-width="3"/>
+    <path d="M336 180 Q360 164 380 176" stroke-width="3"/>
+    <path d="M300 158 Q278 145 266 150" stroke-width="3"/>
+    <path d="M300 130 Q320 118 334 126" stroke-width="3"/>
+  </g>
+  <g fill="#c9a66b" opacity=".85">
+    <ellipse cx="230" cy="152" rx="13" ry="7" transform="rotate(-36 230 152)"/>
+    <ellipse cx="372" cy="139" rx="13" ry="7" transform="rotate(40 372 139)"/>
+    <ellipse cx="300" cy="111" rx="12" ry="7" transform="rotate(78 300 111)"/>
+    <ellipse cx="224" cy="178" rx="10" ry="6" transform="rotate(12 224 178)"/>
+    <ellipse cx="382" cy="177" rx="10" ry="6" transform="rotate(-18 382 177)"/>
+  </g>
+  <path d="M258 232 Q238 270 246 324 Q254 368 300 376 Q346 368 354 324 Q362 270 342 232 Z" fill="#f2e8db" stroke="#b9a58f" stroke-width="3"/>
+  <ellipse cx="300" cy="232" rx="42" ry="13" fill="#cdbba8"/>
+  <ellipse cx="300" cy="232" rx="29" ry="8" fill="#b19c86"/>
+  <path d="M268 282 Q300 296 332 282" fill="none" stroke="#c9b8a4" stroke-width="4" opacity=".65"/>
+  <path d="M258 318 Q300 334 342 318" fill="none" stroke="#c9b8a4" stroke-width="4" opacity=".65"/>
+</svg>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="拾光二手好物，讓閒置物品遇見下一個主人。簡易刊登、搜尋與購買流程。">
+  <title>拾光二手｜讓好物遇見下一個主人</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="拾光二手首頁">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <path d="M12 14.5h11.5a5.5 5.5 0 0 1 0 11H17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M20 9l5.5 5.5L20 20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M28 26.5H16.5a5.5 5.5 0 0 1 0-11H23" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M20 32l-5.5-5.5L20 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>拾光</strong>
+          <small>二手好物</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="主要導覽">
+        <a href="#browse">逛好物</a>
+        <a href="#how">怎麼交易</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="ghost-button account-button" id="accountButton" type="button" aria-label="登入或註冊帳號">
+          <span class="account-avatar" id="accountAvatar" aria-hidden="true"></span>
+          <span id="accountLabel">登入</span>
+        </button>
+        <button class="ghost-button notification-button" id="notificationButton" type="button" aria-label="查看降價通知" title="降價通知">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M18 9a6 6 0 1 0-12 0c0 5-2 6-2 6h16s-2-1-2-6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M10 20a2.2 2.2 0 0 0 4 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="count-bubble" id="notificationBadge" hidden>0</span>
+        </button>
+        <button class="ghost-button" id="headerTradesButton" type="button">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 8.5h14l-1 11H6l-1-11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M9 9V7a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span>我的交易</span>
+          <span class="count-bubble" id="tradeBadge" hidden>0</span>
+        </button>
+        <button class="primary-button header-list-button" id="openListingButton" type="button">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span>刊登商品</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span>讓閒置，成為別人的心頭好</p>
+        <h1>讓好物，<br><em>遇見下一個主人。</em></h1>
+        <p class="hero-description">把用不到的好物交給需要的人，也為生活帶回一件剛剛好的新收藏。簡單刊登、安心面交，讓每一次轉手都有溫度。</p>
+        <div class="hero-actions">
+          <button class="primary-button large-button" id="heroBrowseButton" type="button">
+            逛逛好物
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="text-button" id="heroListButton" type="button">
+            我有好物想刊登
+            <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <div class="hero-stats" aria-label="平台統計">
+          <div>
+            <strong id="statAvailable">0</strong>
+            <span>件好物等你帶走</span>
+          </div>
+          <div>
+            <strong id="statSold">0</strong>
+            <span>件好物找到新家</span>
+          </div>
+          <div>
+            <strong id="statCategories">7</strong>
+            <span>種生活分類</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="精選商品">
+        <div class="hero-orbit"></div>
+        <button class="hero-product hero-product-main" type="button" data-open-product="seed-camera">
+          <span class="hero-product-image">
+            <img src="assets/camera.svg" alt="Fujifilm X-T30 微單眼相機">
+          </span>
+          <span class="hero-product-info">
+            <span class="hero-product-label">本週精選</span>
+            <strong>Fujifilm X-T30</strong>
+            <span class="hero-product-price">NT$ 14,500</span>
+          </span>
+        </button>
+        <button class="hero-product hero-product-small" type="button" data-open-product="seed-lamp">
+          <img src="assets/lamp.svg" alt="北歐木質桌燈">
+          <span>
+            <strong>木質桌燈</strong>
+            <small>NT$ 1,280</small>
+          </span>
+        </button>
+        <div class="hero-note">
+          <span class="hero-note-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3 5 6v5c0 4.6 2.8 8.1 7 10 4.2-1.9 7-5.4 7-10V6l-7-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span><strong>安心面交</strong><small>當面確認，交易更放心</small></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog" id="browse">
+      <div class="section-heading catalog-heading">
+        <div>
+          <p class="eyebrow"><span></span>慢慢逛，總會遇見喜歡的</p>
+          <h2>最新好物</h2>
+        </div>
+        <div class="catalog-tools">
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/>
+              <path d="m16 16 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <input id="searchInput" type="search" placeholder="搜尋商品、地點或賣家" autocomplete="off">
+          </label>
+          <label class="select-box">
+            <span class="sr-only">排序方式</span>
+            <select id="sortSelect">
+              <option value="newest">最新刊登</option>
+              <option value="price-asc">價格由低到高</option>
+              <option value="price-desc">價格由高到低</option>
+            </select>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="m8 10 4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </label>
+        </div>
+      </div>
+
+      <div class="filter-row">
+        <div class="category-chips" id="categoryFilters" role="group" aria-label="商品分類"></div>
+        <p class="result-count" id="resultCount" aria-live="polite"></p>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <span class="empty-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none">
+            <circle cx="28" cy="28" r="16" stroke="currentColor" stroke-width="2.5"/>
+            <path d="m40 40 10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M22 28h12M28 22v12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".4"/>
+          </svg>
+        </span>
+        <h3>還沒找到剛好的那一件</h3>
+        <p>換個關鍵字或分類試試看，也可以成為第一個刊登的人。</p>
+        <button class="secondary-button" id="resetFiltersButton" type="button">清除篩選</button>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <div class="how-inner">
+        <div class="how-heading">
+          <p class="eyebrow light"><span></span>簡單、直接、有溫度</p>
+          <h2>好物繼續流動，<br>只需要三個步驟。</h2>
+        </div>
+        <div class="how-steps">
+          <article>
+            <span class="step-number">01</span>
+            <h3>刊登好物</h3>
+            <p>拍張照片、寫下價格與商品狀況，一分鐘就能完成上架。</p>
+          </article>
+          <article>
+            <span class="step-number">02</span>
+            <h3>找到心動</h3>
+            <p>用分類與關鍵字尋寶，喜歡就按下購買，保留這件好物。</p>
+          </article>
+          <article>
+            <span class="step-number">03</span>
+            <h3>面交帶走</h3>
+            <p>和賣家約好時間地點，當面確認商品，讓交易安心完成。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark small" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <path d="M12 14.5h11.5a5.5 5.5 0 0 1 0 11H17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M20 9l5.5 5.5L20 20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M28 26.5H16.5a5.5 5.5 0 0 1 0-11H23" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M20 32l-5.5-5.5L20 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div>
+          <strong>拾光二手</strong>
+          <p>讓好物，遇見下一個主人。</p>
+        </div>
+      </div>
+      <p class="footer-note">所有刊登與交易資料僅儲存於你的瀏覽器，不會上傳到伺服器。</p>
+      <p class="footer-copy">© <span id="currentYear"></span> 拾光二手</p>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="accountDialog" aria-labelledby="accountTitle">
+    <div class="modal-panel account-panel" id="accountDialogContent"></div>
+  </dialog>
+
+  <dialog class="modal" id="productDialog" aria-labelledby="productDialogTitle">
+    <div class="modal-panel detail-panel" id="productDialogContent"></div>
+  </dialog>
+
+  <dialog class="modal" id="listingDialog" aria-labelledby="listingDialogTitle">
+    <div class="modal-panel form-panel">
+      <button class="modal-close" type="button" data-close-dialog aria-label="關閉刊登視窗">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="modal-heading">
+        <p class="eyebrow"><span></span>把好物交給下一個人</p>
+        <h2 id="listingDialogTitle">刊登商品</h2>
+        <p>填寫簡單資訊，就能讓你的好物被看見。</p>
+      </div>
+
+      <form id="listingForm" novalidate>
+        <div class="form-grid">
+          <label class="field span-2">
+            <span>商品名稱 <b>*</b></span>
+            <input name="title" type="text" maxlength="40" placeholder="例如：Fujifilm 微單眼相機" required>
+          </label>
+
+          <label class="field">
+            <span>售價 <b>*</b></span>
+            <span class="input-with-prefix">
+              <i>NT$</i>
+              <input name="price" type="number" min="1" step="1" placeholder="0" required>
+            </span>
+          </label>
+
+          <label class="field">
+            <span>原價（選填）</span>
+            <span class="input-with-prefix">
+              <i>NT$</i>
+              <input name="originalPrice" type="number" min="0" step="1" placeholder="0">
+            </span>
+          </label>
+
+          <label class="field">
+            <span>分類 <b>*</b></span>
+            <span class="select-field">
+              <select name="category" required>
+                <option value="數位">數位</option>
+                <option value="家電">家電</option>
+                <option value="服飾">服飾</option>
+                <option value="書籍">書籍</option>
+                <option value="居家" selected>居家</option>
+                <option value="運動">運動</option>
+                <option value="其他">其他</option>
+              </select>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m8 10 4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </label>
+
+          <label class="field">
+            <span>商品狀況 <b>*</b></span>
+            <span class="select-field">
+              <select name="condition" required>
+                <option value="全新">全新</option>
+                <option value="近全新">近全新</option>
+                <option value="九成新" selected>九成新</option>
+                <option value="八成新">八成新</option>
+                <option value="良好">良好</option>
+              </select>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m8 10 4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </label>
+
+          <label class="field">
+            <span>面交地點 <b>*</b></span>
+            <input name="location" type="text" maxlength="30" placeholder="例如：台北・大安" required>
+          </label>
+
+          <div class="field">
+            <span>商品圖片（選填）</span>
+            <label class="image-upload" id="imageUploadZone" for="listingImage">
+              <input id="listingImage" type="file" accept="image/*" hidden>
+              <span class="upload-empty" id="uploadEmpty">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3.5" y="4.5" width="17" height="15" rx="2.5" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="9" cy="9.5" r="1.5" fill="currentColor"/>
+                  <path d="m5 17 4.5-4.5 3 3 2-2L19 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>點擊上傳照片</span>
+              </span>
+              <span class="upload-preview" id="uploadPreview" hidden>
+                <img id="imagePreview" alt="商品圖片預覽">
+                <span id="imageFileName"></span>
+              </span>
+            </label>
+          </div>
+
+          <label class="field span-2">
+            <span>商品描述 <b>*</b>
+              <small><span id="descCount">0</span> / 300</small>
+            </span>
+            <textarea name="description" id="listingDescription" rows="4" maxlength="300" placeholder="分享商品的使用狀況、配件或想讓買家知道的事..." required></textarea>
+          </label>
+        </div>
+
+        <p class="form-error" id="listingError" role="alert" hidden></p>
+
+        <div class="form-actions">
+          <button class="secondary-button" type="button" data-close-dialog>取消</button>
+          <button class="primary-button" type="submit">送出刊登</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="checkoutDialog" aria-labelledby="checkoutTitle">
+    <div class="modal-panel checkout-panel" id="checkoutDialogContent"></div>
+  </dialog>
+
+  <dialog class="modal" id="tradesDialog" aria-labelledby="tradesTitle">
+    <div class="modal-panel trades-panel">
+      <button class="modal-close" type="button" data-close-dialog aria-label="關閉我的交易">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="modal-heading">
+        <p class="eyebrow"><span></span>你的收藏與足跡</p>
+        <h2 id="tradesTitle">我的交易</h2>
+      </div>
+      <div class="trade-tabs" role="tablist" aria-label="交易列表">
+        <button class="trade-tab active" id="purchasesTab" type="button" role="tab" aria-selected="true" data-trade-tab="purchases">購買 <span id="purchaseCount">0</span></button>
+        <button class="trade-tab" id="offersTab" type="button" role="tab" aria-selected="false" data-trade-tab="offers">出價 <span id="offerCount">0</span></button>
+        <button class="trade-tab" id="favoritesTab" type="button" role="tab" aria-selected="false" data-trade-tab="favorites">收藏 <span id="favoriteCount">0</span></button>
+        <button class="trade-tab" id="listingsTab" type="button" role="tab" aria-selected="false" data-trade-tab="listings">刊登 <span id="listingCount">0</span></button>
+      </div>
+      <div id="tradesContent" class="trades-content"></div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="offerDialog" aria-labelledby="offerTitle">
+    <div class="modal-panel offer-panel" id="offerDialogContent"></div>
+  </dialog>
+
+  <dialog class="modal" id="priceDialog" aria-labelledby="priceTitle">
+    <div class="modal-panel price-panel" id="priceDialogContent"></div>
+  </dialog>
+
+  <dialog class="modal" id="notificationsDialog" aria-labelledby="notificationsTitle">
+    <div class="modal-panel notifications-panel">
+      <button class="modal-close" type="button" data-close-dialog aria-label="關閉降價通知">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="modal-heading">
+        <p class="eyebrow"><span></span>收藏商品的好消息</p>
+        <h2 id="notificationsTitle">降價通知</h2>
+        <p>你收藏的商品降價時，會在這裡第一時間提醒你。</p>
+      </div>
+      <div id="notificationsContent" class="notifications-content"></div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="toast-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="m5 12 4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+    <span id="toastMessage"></span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
