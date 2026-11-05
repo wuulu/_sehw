@@ -1,0 +1,11 @@
+{
+  "name": "university-campus-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "大學校務系統 — 教授、學生、管理員",
+  "scripts": {
+    "start": "node server.js",
+    "reset": "node reset.js",
+    "check": "node --check server.js && node --check public/app.js"
+  }
+}
