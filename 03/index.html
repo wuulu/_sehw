@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="wuulu記帳 — 用一個清楚的儀表板掌握收支、預算與儲蓄進度。免費開始，資料只存在你的瀏覽器。">
+  <meta name="theme-color" content="#123f30">
+  <title>wuulu記帳｜把每一塊錢，記成未來的樣子</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="#" data-view="overview" aria-label="小滿記帳首頁">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <path d="M11 25c0-6.6 5.4-12 12-12h5v5c0 6.6-5.4 12-12 12h-5v-5Z" fill="currentColor"/>
+            <path d="M11 28c4.2-7 9.8-11.2 16.8-14.7" stroke="#123f30" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="27.5" cy="13.5" r="2.2" fill="#123f30"/>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>wuulu</strong>
+          <small>把錢記成未來的樣子</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="sidebarNav" aria-label="主要導覽"></nav>
+
+      <div class="sidebar-spacer"></div>
+
+      <div class="pro-card">
+        <span class="pro-badge">PRO</span>
+        <h2>讓記帳自動發生</h2>
+        <p>家庭共享帳本、自動匯入對帳單、雲端同步與進階報表。</p>
+        <button class="pro-button" type="button" data-action="open-pro">
+          查看升級方案
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <p class="sidebar-note">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 5 6v5c0 4.6 2.8 8.1 7 10 4.2-1.9 7-5.4 7-10V6l-7-3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        資料只儲存在你的瀏覽器
+      </p>
+    </aside>
+
+    <div class="main">
+      <div class="mobile-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <path d="M11 25c0-6.6 5.4-12 12-12h5v5c0 6.6-5.4 12-12 12h-5v-5Z" fill="currentColor"/>
+            <path d="M11 28c4.2-7 9.8-11.2 16.8-14.7" stroke="#123f30" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="27.5" cy="13.5" r="2.2" fill="#123f30"/>
+          </svg>
+        </span>
+        <strong>wuulu記帳</strong>
+      </div>
+
+      <header class="topbar">
+        <div class="topbar-title">
+          <p class="eyebrow" id="pageEyebrow">你的財務儀表板</p>
+          <h1 id="pageTitle">總覽</h1>
+        </div>
+        <div class="topbar-actions">
+          <div class="month-nav" id="monthNav">
+            <button type="button" data-action="prev-month" aria-label="上一個月">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m14 6-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <span id="monthLabel">—</span>
+            <button type="button" data-action="next-month" aria-label="下一個月">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m10 6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" type="button" data-action="add-tx" id="addTxButton">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            新增交易
+          </button>
+        </div>
+      </header>
+
+      <main class="view-host" id="viewHost"></main>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="行動版導覽"></nav>
+
+  <dialog class="modal" id="txDialog" aria-labelledby="txDialogTitle">
+    <div class="modal-panel">
+      <button class="modal-close" type="button" data-close-dialog aria-label="關閉">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+      </button>
+      <div class="modal-heading">
+        <p class="eyebrow" id="txDialogEyebrow">記下這一筆</p>
+        <h2 id="txDialogTitle">新增交易</h2>
+      </div>
+
+      <form id="txForm" novalidate>
+        <div class="type-toggle" role="group" aria-label="收支類型">
+          <button type="button" data-tx-type="expense">支出</button>
+          <button type="button" data-tx-type="income">收入</button>
+        </div>
+
+        <label class="field amount-field">
+          <span>金額</span>
+          <span class="amount-input">
+            <i>NT$</i>
+            <input name="amount" id="txAmount" type="number" min="1" step="1" inputmode="decimal" placeholder="0" autocomplete="off">
+          </span>
+        </label>
+
+        <div class="field">
+          <span>分類</span>
+          <div class="category-grid" id="txCategories" role="group" aria-label="交易分類"></div>
+        </div>
+
+        <div class="form-grid">
+          <label class="field">
+            <span>帳戶</span>
+            <span class="select-field">
+              <select name="accountId" id="txAccount"></select>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m8 10 4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </label>
+          <label class="field">
+            <span>日期</span>
+            <input name="date" id="txDate" type="date">
+          </label>
+          <label class="field span-2">
+            <span>備註<small>選填</small></span>
+            <input name="note" id="txNote" type="text" maxlength="60" placeholder="例如：和朋友吃晚餐">
+          </label>
+        </div>
+
+        <p class="form-error" id="txError" role="alert" hidden></p>
+
+        <div class="form-actions">
+          <button class="btn btn-ghost" type="button" data-close-dialog>取消</button>
+          <button class="btn btn-primary" type="submit" id="txSubmit">儲存交易</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="accountDialog" aria-labelledby="accountDialogTitle">
+    <div class="modal-panel">
+      <button class="modal-close" type="button" data-close-dialog aria-label="關閉">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+      </button>
+      <div class="modal-heading">
+        <p class="eyebrow">把資產放進同一個地方</p>
+        <h2 id="accountDialogTitle">新增帳戶</h2>
+      </div>
+      <form id="accountForm" novalidate>
+        <div class="form-grid">
+          <label class="field span-2">
+            <span>帳戶名稱</span>
+            <input name="name" type="text" maxlength="24" placeholder="例如：台新銀行、街口錢包" autocomplete="off">
+          </label>
+          <label class="field">
+            <span>帳戶類型</span>
+            <span class="select-field">
+              <select name="type">
+                <option value="bank">銀行帳戶</option>
+                <option value="cash">現金</option>
+                <option value="credit">信用卡</option>
+                <option value="ewallet">電子錢包</option>
+              </select>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m8 10 4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </label>
+          <label class="field">
+            <span>目前餘額</span>
+            <span class="input-with-prefix">
+              <i>NT$</i>
+              <input name="initial" type="number" step="1" placeholder="0" value="0">
+            </span>
+          </label>
+        </div>
+        <p class="form-hint">信用卡餘額可填負數，代表目前尚未繳清的卡費。</p>
+        <p class="form-error" id="accountError" role="alert" hidden></p>
+        <div class="form-actions">
+          <button class="btn btn-ghost" type="button" data-close-dialog>取消</button>
+          <button class="btn btn-primary" type="submit">建立帳戶</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="proDialog" aria-labelledby="proDialogTitle">
+    <div class="modal-panel pro-panel">
+      <button class="modal-close" type="button" data-close-dialog aria-label="關閉">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+      </button>
+      <div class="modal-heading">
+        <p class="eyebrow">wuulu Pro</p>
+        <h2 id="proDialogTitle">讓理財，再省力一點。</h2>
+        <p>免費版已經能好好記帳；Pro 版替你處理重複的事，把時間留給生活。</p>
+      </div>
+
+      <div class="plan-grid">
+        <article class="plan-card">
+          <span class="plan-tag">目前方案</span>
+          <h3>免費版</h3>
+          <p class="plan-price"><small>NT$</small>0<small>/ 月</small></p>
+          <ul>
+            <li>收支紀錄與分類</li>
+            <li>每月預算管理</li>
+            <li>財務分析圖表</li>
+            <li>本機資料匯出</li>
+          </ul>
+          <button class="btn btn-ghost" type="button" data-close-dialog>繼續使用</button>
+        </article>
+
+        <article class="plan-card featured">
+          <span class="plan-tag">即將推出</span>
+          <h3>小滿 Pro</h3>
+          <p class="plan-price"><small>NT$</small>99<small>/ 月</small></p>
+          <ul>
+            <li>家人共享帳本</li>
+            <li>銀行帳單自動匯入</li>
+            <li>跨裝置雲端同步</li>
+            <li>自訂報表與年度回顧</li>
+          </ul>
+          <form id="waitlistForm" class="waitlist-form">
+            <input type="email" id="waitlistEmail" placeholder="你的 Email" autocomplete="email" required>
+            <button class="btn btn-primary" type="submit">加入等候名單</button>
+          </form>
+          <p class="waitlist-message" id="waitlistMessage" role="status"></p>
+        </article>
+      </div>
+      <p class="pro-disclaimer">此為展示版本，方案與收費不會實際生效。</p>
+    </div>
+  </dialog>
+
+  <input type="file" id="importFile" accept="application/json,.json" hidden>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span id="toastMessage"></span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

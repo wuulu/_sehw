@@ -1,0 +1,10 @@
+{
+  "name": "xiaoman-ledger",
+  "version": "1.0.0",
+  "private": true,
+  "description": "小滿記帳 — 個人收支、預算與財務分析",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check app.js && node --check server.js"
+  }
+}
