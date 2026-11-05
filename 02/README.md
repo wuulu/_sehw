@@ -138,6 +138,3 @@ npm run check
 - `POST /api/announcements`：發布公告（教授、管理員）
 - `DELETE /api/announcements/:id`：刪除公告（作者或管理員）
 
-## 授權與使用
-
-此專案為教學與示範用途，資料儲存在本機 JSON 檔案中，不適合直接用於正式生產環境。
