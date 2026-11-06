@@ -1,0 +1,11 @@
+{
+  "name": "lucky-draw",
+  "version": "1.0.0",
+  "private": true,
+  "description": "以 Cloudflare Pages 部署的線上抽籤網站",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check public/app.js && node --check server.js",
+    "deploy": "npx wrangler deploy"
+  }
+}
