@@ -1,6 +1,8 @@
 # 抽籤所 Lucky Draw
 
-以 Cloudflare Pages 部署的線上抽籤網站。純前端、免後端，資料自動存在瀏覽器的 `localStorage`。
+線上網站：<https://wuulu-hw9.yulu96413.workers.dev/>
+
+以 Cloudflare Workers 部署的線上抽籤網站。純前端、免後端，資料自動存在瀏覽器的 `localStorage`。
 
 ## 功能
 
