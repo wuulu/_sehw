@@ -1,0 +1,52 @@
+{
+  "name": "wuuluhw10",
+  "version": "1.0.0",
+  "description": "抽籤所 Lucky Draw：可執行的線上抽籤網站，以及可重複使用的抽籤 API。",
+  "license": "MIT",
+  "author": "吳宇琭",
+  "type": "commonjs",
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "wuuluhw10": "bin/cli.cjs"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "public",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node ./bin/cli.cjs",
+    "test": "node --test",
+    "check": "node --check lib/index.cjs && node --check lib/index.mjs && node --check bin/cli.cjs && node --check public/app.js"
+  },
+  "keywords": [
+    "lucky-draw",
+    "lottery",
+    "raffle",
+    "random",
+    "抽籤",
+    "抽獎",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuulu/_sehw.git"
+  },
+  "homepage": "https://github.com/wuulu/_sehw/tree/main/10",
+  "bugs": {
+    "url": "https://github.com/wuulu/_sehw/issues"
+  }
+}
